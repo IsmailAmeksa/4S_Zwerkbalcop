@@ -1,15 +1,15 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #f2f2f2;
 }
 
-.wrapper{
+.wrapper {
     max-width: 960px;
     margin: 2rem auto;
 }
 
-header{
+header {
     background-color: #EEBA30;
     color: #AE0001;
     padding: 1rem 2rem;
@@ -18,7 +18,7 @@ header{
     grid-gap: 2rem;
 }
 
-nav{
+nav {
     min-width: 50%;
     max-width: 500px;
     display: flex;
@@ -27,61 +27,114 @@ nav{
     flex-wrap: wrap;
 }
 
-header .title{
+header .title {
     font-family: Metamorphous;
     font-size: 2.25rem;
     display: flex;
     align-items: center;
 }
 
-nav a{
+nav a {
     color: #AE0001;
     text-decoration: none;
 }
 
-nav a.active{
+nav a.active {
     color: #740001;
     font-weight: bold;
 }
 
-.company{
+.company {
     color: #f14142;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-img.logo{
+img.logo {
     max-height: 45px;
     margin-left: 8px;
 }
 
-.table{
+.table {
     width: 100%;
 }
 
-.table th{
+.table th {
     background-color: #AE0001;
 }
 
-.table th, .table td{
+.table th,
+.table td {
     padding: .5em 1em;
 }
 
-.table tr:nth-child(odd) td
-{
+.table tr:nth-child(odd) td {
     background-color: #EEBA30;
 }
 
-.table tr:hover td{
+.table tr:hover td {
     background-color: #D3A625;
 }
 
-label{
+label {
     min-width: 160px;
     display: inline-block;
 }
 
-.form-control{
+.form-control {
     min-width: 200px;
+}
+
+
+
+
+/* additions/adjustments */
+.Amount {
+    background: none;
+    padding: 10px 20px 10px 20px;
+    border: #EEBA30 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 78%;
+}
+
+.Amount h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.Amount p {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+
+
+.gridFlexAmount {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    
+}
+
+.gridFlex img {
+    background: none;
+    padding: 10px;
+    border: #EEBA30 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+}
+
+.gridFlex {
+    display: flex;
+    width: 100%;
 }
