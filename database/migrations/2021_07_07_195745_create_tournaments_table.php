@@ -18,6 +18,8 @@ class CreateTournamentsTable extends Migration
             $table->string('name');
             $table->date('date');
             $table->timestamps();
+            $table->time('start_time')->nullable();
+
         });
     }
 

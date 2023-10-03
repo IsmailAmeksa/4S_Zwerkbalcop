@@ -14,9 +14,8 @@ class TournamentController extends Controller
      */
     public function index()
     {
-        $tournaments = Tournament::all();
-        return view('tournaments/index')
-                ->with('tournaments', $tournaments);
+        $tournaments = Tournament::orderBy('date', 'asc')->get(); // Sorteer toernooien op datum in oplopende volgorde
+        return view('tournaments/index', compact('tournaments'));
     }
 
     /**
@@ -38,11 +37,13 @@ class TournamentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'start_time' => 'nullable|date_format:H:i', // Valideer de starttijd als HH:MM formaat
         ]);
         
         $tournament = new Tournament();
         $tournament->name = $request->name;
+        $tournament->start_time = $request->start_time; // Voeg starttijd toe aan de toernooi-entiteit
         $tournament->save();
         
         return redirect()->route('tournaments.index');
